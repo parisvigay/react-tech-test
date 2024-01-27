@@ -15,4 +15,5 @@
 
 .toHome:hover {
     color: white;
+    transition: ease .25s;
 }

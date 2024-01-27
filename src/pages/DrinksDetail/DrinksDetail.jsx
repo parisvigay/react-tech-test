@@ -22,14 +22,15 @@ export default function DrinksDetail() {
       catch(error) {
         console.error(error);
       }
-    }
-    getBeer();
+    };
 
+    getBeer();
+    
   }, [beerId]);
 
   function toHome() {
     navigate('/')
-  }
+  };
 
   return (
     <div className="drinksDetailMain">

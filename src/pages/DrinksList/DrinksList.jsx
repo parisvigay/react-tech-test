@@ -4,6 +4,7 @@ import './DrinksList.css'
 
 export default function DrinksList() {
   const [beers, setBeers] = useState([]);
+  const [moreBeers, setMoreBeers] = useState(false);
 
   useEffect(() => {
     async function getBeers() {
@@ -15,10 +16,27 @@ export default function DrinksList() {
       catch (error) {
         console.error(error);
       }
-    }
+    };
 
     getBeers();
+    
   }, []);
+
+  async function getMoreBeers() {
+    try {
+      const response = await fetch("https://api.punkapi.com/v2/beers?")
+      const moreBeers = await response.json();
+      setBeers(moreBeers);
+    }
+    catch (error) {
+      console.error(error);
+    }
+    setMoreBeers(true);
+  };
+
+  function lessBeers() {
+    window.location.reload();
+  };
 
   return (
     <div className="drinksListMain">
@@ -27,6 +45,13 @@ export default function DrinksList() {
           <DrinksCard key={index} beer={beer}/>
         ))}
       </div>
+      {moreBeers ? (
+        <div className="loadBeers" onClick={lessBeers}>See Less Beers</div>
+      ) : (
+        <div className="loadBeers" onClick={getMoreBeers}>
+          See More Beers
+        </div>
+      )}
     </div>
   )
 }
