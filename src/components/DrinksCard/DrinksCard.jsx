@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './DrinksCard.css'
 
 export default function DrinksCard({beer}) {
@@ -9,11 +10,13 @@ export default function DrinksCard({beer}) {
   };
 
   return (
-    <div className="drinksCard" style={style}>
-      <p className="cardTitle">{beer.name}</p>
-      <div className="titleCard">
-        <p className="cardDesc">{beer.description}</p>
+    <Link>
+      <div className="drinksCard" style={style}>
+        <p className="cardTitle">{beer.name}</p>
+        <div className="titleCard">
+          <p className="cardDesc">{beer.description}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   )
 }
