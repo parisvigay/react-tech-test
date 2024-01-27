@@ -10,7 +10,6 @@ export default function DrinksList() {
       try {
         const response = await fetch("https://api.punkapi.com/v2/beers?per_page=10")
         const beers = await response.json();
-        console.log(beers);
         setBeers(beers);
       }
       catch (error) {

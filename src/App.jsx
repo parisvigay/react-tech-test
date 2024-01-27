@@ -5,11 +5,9 @@ import DrinksList from './pages/DrinksList/DrinksList';
 
 export default function App() {
   return (
-    <>
-      <DrinksList />
-      <Routes>
-        <Route path="/drinks-detail" element={DrinksDetail} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<DrinksList />} />
+      <Route path="/:drinkId" element={<DrinksDetail />} />
+    </Routes>
   )
 }

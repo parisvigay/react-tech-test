@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+
+.drinksDetailCard {
+    height: 80vh;
+    width: 36vw;
+    background-color: white;
+    border: solid .15vw #303030;
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drinkImg {
+    height: 30vh;
+    width: 5vw;
+}
+
+.drinkNameAndABV {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.drinkName {
+    font-family: Bebas Neue;
+    font-size: 2.5vw;
+}
+
+.drinkABV {
+    font-family: Bebas Neue;
+    font-size: 1.25vw;
+}
+
+.drinkTagline {
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    margin: 0;
+    padding: 2vh;
+}
+
+.drinkDesc {
+    font-family: Montserrat;
+    font-size: 1vw;
+    padding: 4vh 1vw 0 1vw;
+    margin: 0;
+}
+
+.drinkFirstBrewed {
+    font-family: Montserrat;
+    font-size: 1vw;
+}

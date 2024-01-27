@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './DrinksCard.css'
 
-export default function DrinksCard({beer}) {
+export default function DrinksCard({ beer }) {
   const style = {
     backgroundImage: `url(${beer.image_url})`,
     backgroundSize: "contain",
@@ -10,11 +10,11 @@ export default function DrinksCard({beer}) {
   };
 
   return (
-    <Link>
+    <Link style={{ textDecoration: 'none' }} to={`/${beer.id}`}>
       <div className="drinksCard" style={style}>
-        <p className="cardTitle">{beer.name}</p>
-        <div className="titleCard">
-          <p className="cardDesc">{beer.description}</p>
+        <p className="drinksName">{beer.name}</p>
+        <div className="descCard">
+          <p className="drinksDesc">{beer.description}</p>
         </div>
       </div>
     </Link>

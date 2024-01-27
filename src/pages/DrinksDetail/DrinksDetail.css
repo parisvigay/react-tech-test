@@ -1,0 +1,18 @@
+.drinksDetailMain {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toHome {
+    position: absolute;
+    top: 10vh;
+    left: 10vh;
+    color: black;
+}
+
+.toHome:hover {
+    color: white;
+}
